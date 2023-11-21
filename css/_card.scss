@@ -2,22 +2,6 @@
 @import '_variables';
 
 // ----------------------------------------------------
-//  Customized Card Wrap
-// ----------------------------------------------------
-
-@mixin columns($desktop, $tablet, $mobile) {
-    grid-template-columns: repeat($desktop, 1fr);
-    
-    @media (max-width: 1199.98px) {
-        grid-template-columns: repeat($tablet, 1fr);
-    }
-
-    @media (max-width: 575.98px) {
-        grid-template-columns: repeat($mobile, 1fr);
-    }
-}
-
-// ----------------------------------------------------
 //  Card
 // ----------------------------------------------------
 
