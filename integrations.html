@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrations</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Iconfont -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/integrations.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+
+                    <!-- Filter -->
+                    <ul class="filter-wrap" id="filterChannel">
+                        <li class="filter-item"><a class="filter-link active" href="javascript://"><i class="ti ti-layout-grid"></i>All</a></li>
+                        <li class="filter-item"><a data-category="1" class="filter-link" href="javascript://"><i class="ti ti-building-store"></i>Wholesaler&Retail</a></li>
+                        <li class="filter-item"><a data-category="2" class="filter-link" href="javascript://"><i class="ti ti-basket"></i>Marketplace</a></li>
+                        <li class="filter-item"><a data-category="3" class="filter-link" href="javascript://"><i class="ti ti-shopping-cart"></i>Shopping Cart</a></li>
+                        <li class="filter-item"><a data-category="4" class="filter-link" href="javascript://"><i class="ti ti-building-warehouse"></i>3PL&WMS&ERP</a></li>
+                        <li class="filter-item"><a data-category="5" class="filter-link" href="javascript://"><i class="ti ti-file-dollar"></i>Financial Solutions</a></li>
+                    </ul>
+            
+                </div>
+                <div class="col-12 col-md-9">
+            
+                    <!-- Search -->
+                    <div class="search-wrap">
+                        <fieldset class="form-label-group form-group position-relative has-icon-left">
+                            <input class="form-control" id="searchInput" type="text" placeholder="Search by integration name">
+                            <div class="form-control-position">
+                                <i class="ti ti-search"></i>
+                            </div>
+                        </fieldset>
+                        <p class="not-found-result keyword-hide">No search results matching the criteria.</p>
+                    </div>
+            
+                    <!-- Channel List -->
+                    <div class="card-wrap channel-list" id="all-channels">
+                        <div data-category="2" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-amazon.png" alt="Amazon">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Marketplace</span>
+                                    <h5 class="channel-display-name">Amazon Selling Central</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-wayfair.png" alt="Wayfair">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Wayfair</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="3" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-shopify.png" alt="Shopify">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Shopping Cart</span>
+                                    <h5 class="channel-display-name">Shopify</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-home-depot.png" alt="The Home Depot">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">The Home Depot</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-lowes.png" alt="Lowe's">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Lowe's</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-sams-club.png" alt="Sam's Club">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Sam's Club</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-houzz.png" alt="Houzz">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Houzz</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-zulily.png" alt="Zulily">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Zulily</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="2" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-walmart.png" alt="Walmart Marketplace">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Marketplace</span>
+                                    <h5 class="channel-display-name">Walmart Marketplace</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-overstock.png" alt="Overstock">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Overstock</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-debenhams.png" alt="Debenhams">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Debenhams</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="4" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-wayfair-castlegate.png" alt="Wayfair Castlegate">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">3PL&WMS&ERP</span>
+                                    <h5 class="channel-display-name">Castlegate</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="4" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-mainfreight.png" alt="Mainfreight">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">3PL&WMS&ERP</span>
+                                    <h5 class="channel-display-name">Mainfreight</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="4" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-51delivery.png" alt="51 Delivery">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">3PL&WMS&ERP</span>
+                                    <h5 class="channel-display-name">51 Delivery</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="4" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-corsan.png" alt="Corsan">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">3PL&WMS&ERP</span>
+                                    <h5 class="channel-display-name">Corsan</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="5" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-quickbook.png" alt="Quickbooks">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Financial Solutions</span>
+                                    <h5 class="channel-display-name">Quickbooks</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="2" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-tiktok.png" alt="TikTok">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Marketplace</span>
+                                    <h5 class="channel-display-name">TikTok</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="2" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-shein.png" alt="Shein">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Marketplace</span>
+                                    <h5 class="channel-display-name">Shein</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="2" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-temu.png" alt="Temu">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Marketplace</span>
+                                    <h5 class="channel-display-name">Temu</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-petco.png" alt="Petco">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Petco</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-cymax.png" alt="Cymax">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Cymax</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-category="1" class="card channel-card">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="channel-icon">
+                                        <img src="/images/channels/logo-target.png" alt="Target">
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="channel-category">Wholesaler&Retail</span>
+                                    <h5 class="channel-display-name">Target</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                       
+            </div>
+        </div>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- filter -->
+    <script src="js/filter.js"></script>
+</body>
+</html>

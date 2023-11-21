@@ -1,0 +1,72 @@
+// Variable
+@import '_variables';
+@import '_card';
+
+// ----------------------------------------------------
+//  All Channels
+// ----------------------------------------------------
+
+// Filter
+.filter-wrap {
+    position: sticky;
+    top: 48px;
+    left: 0;
+    z-index: 0;
+    padding: 0;
+
+    .filter-item {
+        max-width: 260px;
+        list-style: none;
+
+        .filter-link {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            line-height: 1;
+            color: $color-n-7;
+            background-color: transparent;
+            border-radius: 0.3rem;
+            padding: 0.5rem 0.75rem;
+            transition: 0.3s;
+
+            &:hover {
+                color: $color-synctify;
+            }
+
+            &.active {
+                color: $color-n-1;
+                background-color: $color-synctify;
+            }
+
+            .filter-icon {
+                width: 1.2rem;
+                min-width: 1.2rem;
+                margin-right: 0.75rem;
+            }
+        }
+    }
+}
+
+.keyword-hide,
+.category-hide {
+    display: none;
+}
+
+// Search Bars
+.search-wrap {
+    margin-bottom: 1.5rem;
+
+    .search-icon {
+        width: 1rem;
+    }
+
+    .not-found-result {
+        margin-top: 1.5rem
+    }
+}
+
+// Customized Card Layout
+#all-channels {
+    @include columns(3, 2, 1);
+    gap: 24px;
+}

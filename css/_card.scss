@@ -1,0 +1,95 @@
+// Variable
+@import '_variables';
+
+// ----------------------------------------------------
+//  Customized Card Wrap
+// ----------------------------------------------------
+
+@mixin columns($desktop, $tablet, $mobile) {
+    grid-template-columns: repeat($desktop, 1fr);
+    
+    @media (max-width: 1199.98px) {
+        grid-template-columns: repeat($tablet, 1fr);
+    }
+
+    @media (max-width: 575.98px) {
+        grid-template-columns: repeat($mobile, 1fr);
+    }
+}
+
+// ----------------------------------------------------
+//  Card
+// ----------------------------------------------------
+
+.card {
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 4px 0 rgba($color-n-9, 0.05);
+    margin: 0;
+    height: 100%;
+
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+.card-wrap {
+    display: grid;
+    gap: 30px;
+}
+
+// ----------------------------------------------------
+//  Integration Card
+// ----------------------------------------------------
+
+.channel-list {
+    @include columns(3, 2, 1);
+    gap: 24px;
+
+    .channel-card {
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            .card-top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border: none;
+                background-color: $color-n-1;
+                margin-bottom: 1.5rem;
+        
+                .channel-icon {
+                    width: 48px;
+                    height: 48px;
+        
+                    img {
+                        width: 100%;
+                    }
+                }
+    
+                .channel-status {
+                    text-align: right;
+                }
+            }
+    
+            .card-bottom {
+                display: flex;
+                flex-direction: column;
+    
+                .channel-display-name {
+                    font-family: $font-title;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+    
+                .channel-category {
+                    font-size: 0.875rem;
+                    color: $color-n-5;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap");
+.card {
+  border: none;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(67, 67, 67, 0.05);
+          box-shadow: 0 2px 4px 0 rgba(67, 67, 67, 0.05);
+  margin: 0;
+  height: 100%;
+}
+
+.card .card-body {
+  padding: 1.5rem;
+}
+
+.card-wrap {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+
+.channel-list {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1199.98px) {
+  .channel-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .channel-list {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.channel-list .channel-card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.channel-list .channel-card .card-body .card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  background-color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.channel-list .channel-card .card-body .card-top .channel-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.channel-list .channel-card .card-body .card-top .channel-icon img {
+  width: 100%;
+}
+
+.channel-list .channel-card .card-body .card-top .channel-status {
+  text-align: right;
+}
+
+.channel-list .channel-card .card-body .card-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.channel-list .channel-card .card-body .card-bottom .channel-display-name {
+  font-family: "Outfit", "Noto Sans SC", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.channel-list .channel-card .card-body .card-bottom .channel-category {
+  font-size: 0.875rem;
+  color: #D9D9D9;
+}
+
+.filter-wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px;
+  left: 0;
+  z-index: 0;
+  padding: 0;
+}
+
+.filter-wrap .filter-item {
+  max-width: 260px;
+  list-style: none;
+}
+
+.filter-wrap .filter-item .filter-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: #8C8C8C;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.filter-wrap .filter-item .filter-link:hover {
+  color: #008d71;
+}
+
+.filter-wrap .filter-item .filter-link.active {
+  color: #FFFFFF;
+  background-color: #008d71;
+}
+
+.filter-wrap .filter-item .filter-link .filter-icon {
+  width: 1.2rem;
+  min-width: 1.2rem;
+  margin-right: 0.75rem;
+}
+
+.keyword-hide,
+.category-hide {
+  display: none;
+}
+
+.search-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.search-wrap .search-icon {
+  width: 1rem;
+}
+
+.search-wrap .not-found-result {
+  margin-top: 1.5rem;
+}
+
+#all-channels {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1199.98px) {
+  #all-channels {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  #all-channels {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=integrations.css.map */

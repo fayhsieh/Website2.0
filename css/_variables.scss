@@ -1,0 +1,46 @@
+// ----------------------------------------------------
+//  Fonts
+// ----------------------------------------------------
+
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap');
+
+// Font Family
+$font-title: 'Outfit', 'Noto Sans SC', sans-serif;
+$font-content: 'Lato', 'Noto Sans SC', sans-serif;
+
+// ----------------------------------------------------
+//  Colors
+// ----------------------------------------------------
+
+// Primary
+$color-synctify: #008d71;
+$color-teal: #23a197;
+$color-celadon-green: #a4cfbd;
+$color-gary-green: #3d5a55;
+
+// Background (bg)
+$color-bg-green: #EBF5F1;
+$color-bg-orange: #FDF0EA;
+$color-bg-blue: #EFF1F7;
+
+// Netural (n)
+$color-n-1: #FFFFFF;
+$color-n-2: #FAFAFA;
+$color-n-3: #F5F5F5;
+$color-n-4: #F0F0F0;
+$color-n-5: #D9D9D9;
+$color-n-6: #BFBFBF;
+$color-n-7: #8C8C8C;
+$color-n-8: #595959;
+$color-n-9: #434343;
+$color-n-10: #262626;
+
+// System
+$color-red: #dc3545;
+$color-orange: #fd7e14;
+$color-yellow: #ffc107;
+$color-green: $color-synctify;
+$color-blue: #4277CF;
