@@ -7,8 +7,8 @@
 
 .card {
     border: none;
-    border-radius: 0.3rem;
-    box-shadow: 0 2px 4px 0 rgba($color-n-9, 0.05);
+    border-radius: $border-radius-s;
+    // box-shadow: 0 2px 4px 0 rgba($color-n-9, 0.05);
     margin: 0;
     height: 100%;
 
@@ -31,6 +31,7 @@
     gap: 24px;
 
     .channel-card {
+        border: 1px solid $color-n-4;
 
         .card-body {
             display: flex;
@@ -65,13 +66,18 @@
     
                 .channel-display-name {
                     font-family: $font-title;
+                    font-size: 1.25rem;
                     font-weight: 500;
+                    list-style: 1.25;
+                    letter-spacing: 0.01em; // 1%
                     margin-bottom: 0;
                 }
     
                 .channel-category {
                     font-size: 0.875rem;
-                    color: $color-n-5;
+                    line-height: 1.43;
+                    letter-spacing: 0.01em; // 1%
+                    color: $color-n-7;
                 }
             }
         }
