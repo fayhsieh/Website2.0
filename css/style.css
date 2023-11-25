@@ -90,7 +90,8 @@ h6, .h6 {
 }
 
 .keyword-hide,
-.category-hide {
+.category-hide,
+.api-hide {
   display: none;
 }
 
