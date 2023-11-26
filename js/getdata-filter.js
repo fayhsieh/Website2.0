@@ -49,7 +49,7 @@ $(function(){
             let isShow = item.availableToConnect ? '' : 'api-hide';
 
             $('#all-channels').append(`
-                <div data-category="${item.category.id}" class="card channel-card ${isShow}">
+                <div data-id="${item.id}" data-category="${item.category.id}" class="card channel-card ${isShow}">
                     <div class="card-body">
                         <div class="card-top">
                             <div class="channel-icon">
@@ -58,7 +58,7 @@ $(function(){
                         </div>
                         <div class="card-bottom">
                             <span class="channel-category">${item.category.name}</span>
-                            <h5 class="channel-display-name" data-id="${item.id}">${item.name}</h5>
+                            <h5 class="channel-display-name">${item.name}</h5>
                         </div>
                     </div>
                 </div>
