@@ -1,27 +1,39 @@
 $(function(){
 
+    // data
     let data_categories = [];
     let data_sources = [];
 
     // 主流程
     ~async function() {
-        // 1. 取得資料
-        await getData();
+        // 1. 判斷網頁語系
+        let lang_param = await checkLanguage();
+        
+        // 2. 取得資料
+        await getData(lang_param);
 
-        // 2. 建置畫面
+        // 3. 建置畫面
         await buildView();
 
-        // 3. 初始化 filter 功能
+        // 4. 初始化 filter 功能
         await initFilter();
     }();
 
 
+    // 判斷網頁語系
+    async function checkLanguage() {
+        let flag = $('body').hasClass('translatepress-zh_CN');
+        let lang_param = flag ? '?lang=zh_CN' : '';
+        return lang_param;
+    }
+
+
     // 取得資料
-    async function getData() {
+    async function getData(lang_param) {
         // fetch data
         const [response_categories, response_sources] = await Promise.all([
-            fetch('https://oms.synctify.net/api/public/dataSources/categories'),
-            fetch('https://oms.synctify.net/api/public/dataSources'),
+            fetch(`https://oms.synctify.net/api/public/dataSources/categories${lang_param}`),
+            fetch(`https://oms.synctify.net/api/public/dataSources${lang_param}`),
         ]);
         
         // parse data
@@ -48,6 +60,16 @@ $(function(){
         for (let item of data_sources) {
             let isShow = item.availableToConnect ? '' : 'api-hide';
 
+            // tags
+            let tags_html = "";
+            if ( item.tags ) {
+                tags_html+=`<ul class="card-tags">`;
+                for ( tag of item.tags ) {
+                    tags_html+=`<li class="tag-item">API</li>`;
+                }
+                tags_html+=`</ul>`;
+            }
+
             $('#all-channels').append(`
                 <div data-id="${item.id}" data-category="${item.category.id}" class="card channel-card ${isShow}">
                     <div class="card-body">
@@ -60,6 +82,7 @@ $(function(){
                             <span class="channel-category">${item.category.name}</span>
                             <h5 class="channel-display-name">${item.name}</h5>
                         </div>
+                        ${tags_html}
                     </div>
                 </div>
             `);

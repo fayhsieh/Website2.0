@@ -177,7 +177,6 @@ h6, .h6 {
 .channel-list .channel-card .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .channel-list .channel-card .card-body .card-top {
   display: flex;
@@ -214,6 +213,22 @@ h6, .h6 {
   line-height: 1.43;
   letter-spacing: 0.01em;
   color: #8C8C8C;
+}
+.channel-list .channel-card .card-body .card-tags {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.channel-list .channel-card .card-body .card-tags .tag-item {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  line-height: 1;
+  background-color: #EFF1F7;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=style.css.map */

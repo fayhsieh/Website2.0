@@ -36,7 +36,6 @@
         .card-body {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
     
             .card-top {
                 display: flex;
@@ -78,6 +77,24 @@
                     line-height: 1.43;
                     letter-spacing: 0.01em; // 1%
                     color: $color-n-7;
+                }
+            }
+
+            .card-tags {
+                padding: 0;
+                margin: 24px 0 0;
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+
+                .tag-item {
+                    padding: 5px 10px;
+                    border-radius: $border-radius-l;
+                    font-size: 0.8125rem;
+                    line-height: 1;
+                    background-color: $color-bg-blue;
+                    white-space: nowrap;
                 }
             }
         }
