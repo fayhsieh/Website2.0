@@ -62,7 +62,7 @@ $(function(){
 
             // tags
             let tags_html = "";
-            if ( item.tags ) {
+            if ( item.tags.length ) {
                 tags_html+=`<ul class="card-tags">`;
                 for ( tag of item.tags ) {
                     tags_html+=`<li class="tag-item">${tag}</li>`;
