@@ -9,7 +9,7 @@ You can find the "Navigation > Codes > style.scss" and write SCSS here, this plu
 ## Plugins
 
 | Name  | Description | Link |
-|---|---|---|
+|:---|:---|:---|
 | CodeKit - Custom Codes Editor | Your custom SASS, CSS, JS and PHP customizations in same directory. | https://wordpress.org/plugins/custom-codes/ |
 | Definitely allow mobile zooming | This tiny plugin adds the viewport meta tag with zooming permission to give your users the ability to zoom in your website with mobile browsers. | https://wordpress.org/plugins/definitely-allow-mobile-zooming/ |
 | Duplicate Page | Duplicate Posts, Pages and Custom Posts using single click. | https://wordpress.org/plugins/duplicate-page/ |
