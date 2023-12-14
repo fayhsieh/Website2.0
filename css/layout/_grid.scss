@@ -1,0 +1,123 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  Override WP theme styling
+// ----------------------------------------------------
+
+// Hide Default Cover Image
+
+body.page {
+	.featured-image {
+		display: none;
+	}
+}
+
+// ----------------------------------------------------
+//  Container
+// ----------------------------------------------------
+
+// Main
+
+.site-main {
+	.section-wrap {
+		> .wp-block-group__inner-container {
+			@include rwd-container();
+		}
+	}
+}
+
+// Footer
+
+.site-footer {
+	.footer-widgets-container {
+		@include rwd-container();
+	}
+}
+
+// ----------------------------------------------------
+//  Row
+// ----------------------------------------------------
+
+.site-main {
+	.section-wrap {
+		.row {
+			gap: $gutter-width;
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Column
+// ----------------------------------------------------
+
+.site-main {
+	
+	.section-wrap {
+		
+		.row {
+			div[class*="col-"] {
+				flex: 0 0 auto;
+			}
+			
+			.col-12 {
+				width: 100%;
+			}
+			
+			@media screen and (min-width: $grid-breakpoints-xl) {
+				
+				.col-md-1 {
+					width: 8.33333333%;
+				}
+				
+				.col-md-2 {
+					width: 16.66666667%;
+				}
+				
+				.col-md-3 {
+                    width: 25%;
+                }
+
+                .col-md-4 {
+                    width: 33.33333333%;
+                }
+                
+                .col-md-5 {
+                    width: 41.66666667%;
+                }
+
+                .col-md-6 {
+                    width: 50%;
+                }
+    
+                .col-md-7 {
+                    width: 58.33333333%;
+                }
+
+                .col-md-8 {
+                    width: 66.66666667%;
+                }
+				
+				.col-md-9 {
+					width: 75%;
+				}
+
+                .col-md-10 {
+                    width: 83.33333333%;
+                }
+				
+				.col-md-11 {
+					width: 91.66666667%;
+				}
+				
+				.col-md-12 {
+                    width: 100%;
+                }
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  About
+// ----------------------------------------------------
+
+body.page-about {
+	
+	#letter {
+	
+		.wp-block-columns {
+			justify-content: center;
+		}
+		
+		.testimonial {
+			& + .has-large-font-size {
+				margin: 0;
+				padding: 70px 72px 0;
+				text-align: center;
+				
+				@media screen and (max-width: $grid-breakpoints-sm) {
+					padding: 70px 0 0;
+				}
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Team Section
+// ----------------------------------------------------
+
+body.page-about {
+	
+	#team {
+		padding-bottom: 0;
+		
+		.section-heading-wrap {
+			
+			h2 {
+				margin-bottom: 72px;
+			}
+		}
+	}
+}

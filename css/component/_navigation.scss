@@ -1,0 +1,295 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  Navigation
+// ----------------------------------------------------
+
+// admin bar
+#wpadminbar {
+	@media screen and (max-width: 600px) {
+		position: fixed;
+	}
+}
+
+// have admin bar
+#wpadminbar ~ .site-header {
+	top: 32px;
+	
+	@media screen and (max-width: 782px) {
+		top: 46px;
+	}
+	
+	
+	
+	#site-navigation {
+		// 手機板選單
+		&.toggled.toggled {
+			@media screen and (max-width: $grid-breakpoints-xl) {
+				height: calc(100% - 32px - 71px);
+			}
+			@media screen and (max-width: 782px) {
+				height: calc(100% - 46px - 71px);
+			}
+		}
+	}
+}
+
+.site-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 2000;
+	transition: .3s;
+	background-color: transparent;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		background-color: $color-n-1;
+	}
+	
+	
+	&.normal-style {
+		background-color: $color-n-1;
+		box-shadow: $box-shadow;
+	}
+	
+	.inside-header {
+		padding: 20px 80px;
+		
+		@media screen and (max-width: $grid-breakpoints-xl) {
+			padding: 15px 24.5px 15px 0;
+			flex-wrap: nowrap;
+		}
+		
+		.site-logo {
+			flex-shrink: 0;
+			
+			@media screen and (max-width: $grid-breakpoints-xl) {
+				width: 120px;
+			}
+		}
+	}
+}
+
+
+
+// Desktop
+
+#site-navigation {
+    width: 100%;
+	background-color: transparent;
+	
+	// 手機板選單
+	&.toggled.toggled {
+		@media screen and (max-width: $grid-breakpoints-xl) {
+			margin-top: 0;
+			background-color: $color-gray-green;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 71px);
+		}
+		@media screen and (max-width: 782px) {
+			height: calc(100% - 71px);
+		}
+	}
+	
+	
+
+    .grid-container {
+        max-width: 100%;
+
+        .main-nav {
+            width: 100%;
+
+            .float-right {
+                margin-left: auto;
+            }
+			
+			.menu {
+				margin: 0 0 0 15px;
+				
+				@media screen and (max-width: $grid-breakpoints-xl) {
+					margin: 12px 24px;
+				}
+				
+				> .menu-item:not(.mobile-only) {
+					@media screen and (max-width: $grid-breakpoints-xl) {
+						border-bottom: 1px dashed $color-celadon-green;
+					}
+				}
+				
+				.menu-item {
+
+					a, span {
+						font-size: 1rem;
+						font-family: $font-title;
+						font-weight: 500;
+						line-height: 1;
+						letter-spacing: 0.02em; // 2%
+						color: $color-gray-green;
+						transition: .3s;
+						
+						@media screen and (max-width: $grid-breakpoints-xl) {
+							font-size: 1.25rem;
+							line-height: 1.25;
+							color: $color-n-1;
+						}
+						
+						.icon-arrow {
+							@media screen and (max-width: $grid-breakpoints-xl) {
+								font-size: 1.5rem;
+							}
+						}
+
+						&:hover, &:active {
+							color: $color-synctify;
+							
+							@media screen and (max-width: $grid-breakpoints-xl) {
+								color: $color-n-1;
+							}
+						}
+					}
+					
+					a {
+						padding: 15px;
+						
+						@media screen and (max-width: $grid-breakpoints-xl) {
+							padding: 24px 0;
+						}
+					}
+					
+					// pc login btn
+					&#menu-item-26 {
+						display: flex;
+						align-items: center;
+						margin: 0 15px;
+						
+						@media screen and (min-width: 1200px) {
+							&::after {
+								content: '';
+								background-color: $color-n-5;
+								width: 1px;
+								height: 24px;
+								display: inline-block;
+								margin-left: 15px;
+							}
+						}
+						
+						@media screen and (max-width: $grid-breakpoints-xl) {
+							margin: 0;
+						}
+						
+						a {
+							@media screen and (max-width: $grid-breakpoints-xl) {
+								width: 100%;
+							}
+						}
+					}
+					
+					// mobile login btn
+					&#menu-item-493 {
+						@media screen and (max-width: $grid-breakpoints-xl) {
+							padding: 36px 0 16px;
+						}
+					}
+					
+					// language btn
+					&.trp-language-switcher-container {
+						a, 
+						.dropdown-menu-toggle {
+							padding-right: 0;
+						}
+					}
+
+					
+					// dropdown menu
+					.sub-menu {
+						background-color: $color-n-1;
+						width: auto;
+						left: 15px;
+						box-shadow: $box-shadow;
+						border-bottom: unset;
+						
+						@media screen and (max-width: $grid-breakpoints-xl) {
+							background-color: transparent;
+							box-shadow: unset;
+						}
+						
+						a {
+							padding: 15px 20px;
+							
+							@media screen and (max-width: $grid-breakpoints-xl) {
+								padding: 0 0 24px 0;
+							}
+							
+							.trp-ls-language-name {
+								word-break: keep-all;
+								
+								@media screen and (max-width: $grid-breakpoints-xl) {
+									font-size: 1.125rem;
+									line-height: 1.27;
+								}
+								
+							}
+						}
+					}
+				}
+			}
+        }
+    }    
+}
+
+
+
+
+// Mobile
+
+
+// CTA 按鈕
+.site-header {
+	
+	.header-widget {
+	 
+		@media screen and (max-width: $grid-breakpoints-xl) {
+			margin-top: 0;
+			display: flex;
+    		align-items: center;
+    		justify-content: flex-end;
+		}
+	}
+}
+
+
+// 選單按鈕
+#mobile-menu-control-wrapper {
+	order: -1;
+	background-color: transparent;
+	
+	.menu-toggle {
+		background-color: transparent;
+		font-size: 1.125rem;
+		line-height: 1;
+		padding: 0.625rem 1.5rem;
+		color: $color-synctify;
+	}
+}
+
+
+// show
+.desktop-only {
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		display: none !important;
+	}
+}
+.mobile-only {
+
+	@media screen and (min-width: 1200px) {
+		display: none !important;
+	}
+}

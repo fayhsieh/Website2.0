@@ -1,3 +1,5 @@
+<!-- Add the Page Slug to Body Class -->
+
 <?php
 function wpcode_snippet_add_slug_body_class( $classes ) {
 	global $post;

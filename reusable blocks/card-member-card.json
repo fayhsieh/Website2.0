@@ -1,0 +1,5 @@
+{
+  "__file": "wp_block",
+  "title": "card / member-card",
+  "content": "<!-- wp:group {\"className\":\"card member-card\",\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\"}} -->\n<div class=\"wp-block-group card member-card\"><!-- wp:image {\"id\":166,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"https://assets.synctify.net/www/static/2023/11/22071058/team-hsin.png\" alt=\"Hsin - Co-Founder &amp; CEO at Synctify Inc.\" class=\"wp-image-166\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Hsin-Jou Chang</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Co-Founder &amp; CEO</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:group -->"
+}

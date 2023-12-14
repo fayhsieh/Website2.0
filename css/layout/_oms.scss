@@ -1,0 +1,66 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  Hero
+// ----------------------------------------------------
+
+body.page-oms {
+	
+	.hero-section {
+		
+		h1 {
+			@include h2();
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Feature
+// ----------------------------------------------------
+
+body.page-oms {
+	
+	#feature {
+		
+		.row {
+    		justify-content: center;
+		}
+		
+		.section-heading-wrap {
+			text-align: center;
+			
+			@media screen and (max-width: $grid-breakpoints-xl) {
+				text-align: left;
+			}
+		}
+		
+		.horizontal-layout {
+			margin-top: 100px;
+			
+			@media screen and (max-width: $grid-breakpoints-xl) {
+				margin-top: 72px;
+			}
+		}
+	}	
+}
+
+// ----------------------------------------------------
+//  Workflow
+// ----------------------------------------------------
+
+body.page-oms {
+	
+	#workflow {
+		border-top: 1px solid $color-n-5;
+		padding-bottom: 0;
+		
+		.horizontal-layout {
+			margin-top: 50px;
+		}
+	}
+}

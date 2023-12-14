@@ -1,15 +1,144 @@
 // ----------------------------------------------------
+//  Customized Container Width
+// ----------------------------------------------------
+
+@mixin calc-container-width($width) {
+	max-width: calc( #{$width} + #{$gutter-width} * 2 );
+}
+
+@mixin rwd-container() {
+	
+	@include calc-container-width($container-width-xxxl);
+	padding: 0 24px;
+
+	@media screen and (max-width: $grid-breakpoints-xxl) {
+		@include calc-container-width($container-width-xxl);
+	}
+
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		@include calc-container-width($container-width-xl);
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-md) {
+		@include calc-container-width($container-width-md);
+	}
+
+	@media screen and (max-width: $grid-breakpoints-sm) {
+		@include calc-container-width($container-width-sm);
+	}
+}
+
+// ----------------------------------------------------
 //  Customized Card Wrap
 // ----------------------------------------------------
 
 @mixin columns($desktop, $tablet, $mobile) {
     grid-template-columns: repeat($desktop, 1fr);
     
-    @media (max-width: 1199.98px) {
+    @media (max-width: $grid-breakpoints-xl) {
         grid-template-columns: repeat($tablet, 1fr);
     }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: $grid-breakpoints-sm) {
         grid-template-columns: repeat($mobile, 1fr);
     }
+}
+
+// ----------------------------------------------------
+//  Tabler Icon
+// ----------------------------------------------------
+
+@mixin ti() {
+	font-family: "tabler-icons" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+// ----------------------------------------------------
+//  Heading
+// ----------------------------------------------------
+
+@mixin h1() {
+	font-size: 4.5rem;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		font-size: 3.75rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-md) {
+		font-size: 3.375rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-sm) {
+		font-size: 3rem;
+	}
+}
+
+@mixin h2() {
+    font-size: 3.75rem;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		font-size: 3.375rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-md) {
+		font-size: 3rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-sm) {
+		font-size: 2.625rem;
+	}
+}
+
+@mixin h3() {
+    font-size: 3rem;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		font-size: 3rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-md) {
+		font-size: 2.25rem;
+	}
+}
+
+@mixin h4() {
+    font-size: 2.25rem;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		font-size: 2.25rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-md) {
+		font-size: 1.875rem;
+	}
+}
+
+@mixin h5() {
+    font-size: 1.875rem;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		font-size: 1.875rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-md) {
+		font-size: 1.5rem;
+	}
+}
+
+@mixin h6() {
+    font-size: 1.5rem;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		font-size: 1.5rem;
+	}
+	
+	@media screen and (max-width: $grid-breakpoints-md) {
+		font-size: 1.125rem;
+	}
 }

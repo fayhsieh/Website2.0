@@ -1,0 +1,5 @@
+{
+  "__file": "wp_block",
+  "title": "cta-section",
+  "content": "<!-- wp:group {\"tagName\":\"section\",\"className\":\"section-wrap cta-section\",\"layout\":{\"type\":\"constrained\"}} -->\n<section id=\"cta\" class=\"wp-block-group section-wrap cta-section\"><!-- wp:group {\"className\":\"cta-wrap bg-green\",\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\"}} -->\n<div class=\"wp-block-group cta-wrap bg-green\"><!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Curious how Synctify can transform your business?</h2>\n<!-- /wp:heading -->\n\n<!-- wp:block {\"ref\":280} /--></div>\n<!-- /wp:group --></section>\n<!-- /wp:group -->"
+}

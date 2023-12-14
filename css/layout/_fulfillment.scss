@@ -1,0 +1,78 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  Hero Section
+// ----------------------------------------------------
+
+body.page-fulfillment {
+	
+	.hero-section {
+		
+		h1 {
+			@include h2();
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Feature
+// ----------------------------------------------------
+
+body.page-fulfillment {
+	
+	#feature {
+		
+		.sticky-image {
+			
+			.wp-block-image {
+				position: sticky;
+				top: 89px;
+				padding-top: 70px;
+			}
+		}
+		
+		.fulfillment-feature-list {
+			margin-top: 70px;
+			padding-left: 72px;
+			gap: 50px;
+			
+			@media screen and (max-width: $grid-breakpoints-xl) {
+				padding: 0;
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Warehouse Location
+// ----------------------------------------------------
+
+body.page-fulfillment {
+	
+	#location {
+		
+		.row {
+			margin: 0;
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  testimonial Section
+// ----------------------------------------------------
+
+body.page-fulfillment {
+	
+	#testimonial {
+		padding-bottom: 0;
+		
+		.wp-block-columns {
+			justify-content: center;
+		}
+	}
+}

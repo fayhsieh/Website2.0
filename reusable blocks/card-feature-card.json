@@ -1,0 +1,5 @@
+{
+  "__file": "wp_block",
+  "title": "card / feature-card",
+  "content": "<!-- wp:group {\"className\":\"card feature-card\",\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\",\"flexWrap\":\"wrap\"}} -->\n<div class=\"wp-block-group card feature-card\"><!-- wp:image {\"id\":13,\"sizeSlug\":\"full\",\"linkDestination\":\"none\",\"className\":\"feature-icon\"} -->\n<figure class=\"wp-block-image size-full feature-icon\"><img src=\"https://assets.synctify.net/www/static/2023/09/14083948/transparent.png\" alt=\"Synctify\" class=\"wp-image-13\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading {\"level\":3,\"className\":\"feature-title\"} -->\n<h3 class=\"wp-block-heading feature-title\">Mastering Multi-Channels</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"className\":\"feature-description\"} -->\n<p class=\"feature-description\">Seamlessly expand your business across 30+ US online retailers including WayFair, The Home Depot, Overstock, Houzz, and many more.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:group -->"
+}

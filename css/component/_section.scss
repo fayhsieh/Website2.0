@@ -1,0 +1,204 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  General Section
+// ----------------------------------------------------
+
+section.general-section {
+	padding: 120px 0;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		padding: 72px 0;
+	}
+	
+	.row {
+		margin: 0;
+	}
+	
+	.section-heading-wrap {
+		
+		h2 {
+			margin-bottom: 30px;
+		}
+		
+		p {
+			margin-bottom: 0;
+		}
+	}
+	
+	.horizontal-layout {
+		
+		.left-info,
+		.right-info {
+			align-self: center;
+		}
+		
+		.left-info {
+			padding-right: 48px;
+			
+			@media screen and (max-width: $grid-breakpoints-xl) {
+				padding: 0;
+				order: 1;
+			}
+		}
+		
+		.right-info {
+			padding-left: 48px;
+			
+			@media screen and (max-width: $grid-breakpoints-xl) {
+				padding: 0;
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Hero Section
+// ----------------------------------------------------
+
+section.hero-section {
+	display: flex;
+    align-items: center;
+	padding: 100px 0 50px;
+	min-height: 100vh;
+	
+	@media screen and (max-width: $grid-breakpoints-sm) {
+		min-height: auto;
+	}
+	
+	.row {
+		align-items: center !important;
+		margin: 0;
+		
+		@media screen and (max-width: $grid-breakpoints-xl) {
+			flex-direction: column-reverse;
+			flex-wrap: wrap !important;
+		}
+	}
+	
+	.left-info {
+		padding-right: 48px;
+	}
+}
+
+
+// ----------------------------------------------------
+//  CTA Section
+// ----------------------------------------------------
+
+section.cta-section {
+	margin-top: 120px;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		margin-top: 72px;
+	}
+	
+	.cta-wrap {
+		border-radius: $border-radius-l;
+		background-image: url('https://assets.synctify.net/www/static/2023/11/22071342/cta-contact.png');
+		background-repeat: no-repeat;
+    	background-size: contain;
+    	background-position-x: right;
+		padding: 80px;
+		row-gap: 50px;
+		
+		@media screen and (max-width: $grid-breakpoints-lg) {
+			background-size: 55%;
+    		background-position-y: bottom;
+		}
+		
+		@media screen and (max-width: $grid-breakpoints-sm) {
+			background-size: contain;
+    		background-position-y: top;
+			padding: 100% 24px 72px;
+		}
+		
+		// title
+		.wp-block-heading {
+			font-size: 3.375rem;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			line-height: 1.25;
+			max-width: 79%;
+			
+			@media screen and (max-width: $grid-breakpoints-md) {
+				font-size: 2.625rem;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Map Section
+// ----------------------------------------------------
+
+section.map-section {
+	display: flex;
+    align-items: center;
+	min-height: calc( 100vw / 16 * 7 );
+	background-size: cover;
+	background-position: top right;
+	background-image: url("https://assets.synctify.net/www/static/2023/12/13080029/fulfillment-map-desktop.png");
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		background-image: url("https://assets.synctify.net/www/static/2023/12/13075738/fulfillment-map-mobile.png");
+	}
+}
+
+// ----------------------------------------------------
+//  Legal Section
+// ----------------------------------------------------
+
+section.legal-section {
+	padding: 120px 0;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		padding: 72px 0;
+	}
+	
+	.row {
+		justify-content: center;
+	}
+	
+	.legal-list-wrap {
+		
+		ul.legal-list {
+			border-top: 1px solid $color-n-5;
+			margin: 0;
+			
+			li {
+				list-style: none;
+				border-bottom: 1px solid $color-n-5;
+				
+				a {
+					display: inline-block;
+					font-size: 1.125rem;
+					padding: 24px;
+				}
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Page Header
+// ----------------------------------------------------
+
+header.page-header {
+	padding: 240px 0 120px;
+	margin: 0;
+	
+	@media screen and (max-width: $grid-breakpoints-xl) {
+		padding: 144px 0 72px;
+	}
+	
+	h1 {
+		margin: 0;
+	}
+}

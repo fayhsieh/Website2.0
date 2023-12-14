@@ -1,0 +1,5 @@
+{
+  "__file": "wp_block",
+  "title": "btn / cta-btn",
+  "content": "<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"className\":\"cta-btn size-medium style-icon-right icon-arrow-right\"} -->\n<div class=\"wp-block-button cta-btn size-medium style-icon-right icon-arrow-right\"><a class=\"wp-block-button__link wp-element-button\" href=\"/contact\">Book a Demo</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->"
+}

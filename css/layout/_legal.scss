@@ -1,0 +1,71 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  Legal List
+// ----------------------------------------------------
+
+body.page-legal {
+	
+	.wp-block-group__inner-container {
+		padding: 0;
+	}
+	
+	.legal-section {
+		padding: 240px 0;
+		
+		@media screen and (max-width: $grid-breakpoints-xl) {
+			padding: 144px 0 72px;
+		}
+	}
+	
+	.site-footer {
+		margin-top: 0;
+	}
+}
+
+// ----------------------------------------------------
+//  Legal Content
+// ----------------------------------------------------
+
+body.page-privacy-policy,
+body.page-tos {
+	
+	.legal-content {
+		margin-top: calc( #{$gutter-width} * 1.5 );
+		
+		& + .legal-content {
+			margin-top: calc( #{$gutter-width} * 3 );
+		}
+		
+		p, ul, ol, li {
+			font-size: 1.125rem;
+			letter-spacing: 0.02em; // 2%
+			line-height: 2;
+		}
+		
+		ul, ol {
+			
+			li {
+				padding-left: calc( #{$gutter-width} / 2 + 10px);
+				list-style: none;
+				position: relative;
+				
+				&::before {
+					content: '';
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: $color-orange;
+					position: absolute;
+					top: 0.875rem;
+					left: 0;
+				}
+			}
+		}
+	}
+}

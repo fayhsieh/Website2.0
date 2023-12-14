@@ -3,6 +3,7 @@
 // ----------------------------------------------------
 
 // Font Family
+
 $font-title: 'Outfit', 'Noto Sans SC', sans-serif;
 $font-content: 'Lato', 'Noto Sans SC', sans-serif;
 
@@ -11,17 +12,20 @@ $font-content: 'Lato', 'Noto Sans SC', sans-serif;
 // ----------------------------------------------------
 
 // Primary
+
 $color-synctify: #008d71;
 $color-teal: #23a197;
 $color-celadon-green: #a4cfbd;
-$color-gary-green: #3d5a55;
+$color-gray-green: #3d5a55;
 
 // Background (bg)
+
 $color-bg-green: #EBF5F1;
 $color-bg-orange: #FDF0EA;
 $color-bg-blue: #EFF1F7;
 
 // Netural (n)
+
 $color-n-1: #FFFFFF;
 $color-n-2: #FAFAFA;
 $color-n-3: #F5F5F5;
@@ -34,14 +38,60 @@ $color-n-9: #434343;
 $color-n-10: #262626;
 
 // System
+
 $color-red: #dc3545;
 $color-orange: #fd7e14;
 $color-yellow: #ffc107;
 $color-green: $color-synctify;
 $color-blue: #4277CF;
 
+// ----------------------------------------------------
+//  Border Radius
+// ----------------------------------------------------
 
-// Border radius
 $border-radius-s: 4px;
-
+$border-radius-m: 8px;
 $border-radius-l: 12px;
+$border-radius-xl: 16px;
+
+// ----------------------------------------------------
+//  Box Shadow
+// ----------------------------------------------------
+
+$box-shadow: 0 4px 4px 0 rgba($color-n-10, 0.05);
+$box-shadow-illustration: 5px 5px 0 0 $color-n-10;
+
+// ----------------------------------------------------
+//  Gutter
+// ----------------------------------------------------
+
+$gutter-width: 24px;
+
+// ----------------------------------------------------
+//  Breakpoint
+// ----------------------------------------------------
+
+// `xxl` applies to xx-large devices (larger desktops, less than 1400px)
+$grid-breakpoints-xxl: 1599.98px;
+
+// `xl` applies to x-large devices (large desktops, less than 1200px)
+$grid-breakpoints-xl: 1199.98px;
+
+// `lg` applies to large devices (desktops, less than 992px)
+$grid-breakpoints-lg: 991.98px;
+
+// 'md' applies to medium devices (tablets, less than 768px)
+$grid-breakpoints-md: 767.98px;
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+$grid-breakpoints-sm: 575.98px;
+
+// ----------------------------------------------------
+//  Container
+// ----------------------------------------------------
+
+$container-width-xxxl: 1524px;
+$container-width-xxl: 1280px;
+$container-width-xl: 1140px;
+$container-width-md: 720px;
+$container-width-sm: calc( 100vw - #{$gutter-width} * 2 );

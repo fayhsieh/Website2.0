@@ -1,0 +1,5 @@
+{
+  "__file": "wp_block",
+  "title": "block / aside-link",
+  "content": "<!-- wp:group {\"className\":\"aside-link\",\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\"}} -->\n<div class=\"wp-block-group aside-link\"><!-- wp:heading {\"className\":\"aside-title\"} -->\n<h2 class=\"wp-block-heading aside-title\">Contents</h2>\n<!-- /wp:heading -->\n\n<!-- wp:list {\"className\":\"aside-list\"} -->\n<ul class=\"aside-list\"><!-- wp:list-item -->\n<li><a href=\"/legal/tos\">Terms of Service</a></li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item {\"className\":\"active\"} -->\n<li class=\"active\"><a href=\"/legal/privacy-policy\">Privacy Policy</a></li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list --></div>\n<!-- /wp:group -->"
+}

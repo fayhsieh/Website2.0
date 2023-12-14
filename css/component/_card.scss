@@ -1,0 +1,145 @@
+// ----------------------------------------------------
+//  @Import
+// ----------------------------------------------------
+
+@import '../variables'; // Variable
+@import '../mixin';     // Mixin
+
+// ----------------------------------------------------
+//  Card
+// ----------------------------------------------------
+
+.card {
+    border: none;
+    border-radius: $border-radius-s;
+    margin: 0;
+    height: 100%;
+
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+.card-wrap {
+    display: grid;
+    gap: 30px;
+}
+
+// ----------------------------------------------------
+//  Integration Card
+// ----------------------------------------------------
+
+.channel-card {
+	border: 1px solid $color-n-4;
+
+	.card-body {
+		display: flex;
+		flex-direction: column;
+
+		.card-top {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			border: none;
+			background-color: $color-n-1;
+			margin-bottom: 1.5rem;
+
+			.channel-icon {
+				width: 48px;
+				height: 48px;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.channel-status {
+				text-align: right;
+			}
+		}
+
+		.card-bottom {
+			display: flex;
+			flex-direction: column;
+
+			.channel-display-name {
+				font-family: $font-title;
+				font-size: 1.25rem;
+				font-weight: 500;
+				list-style: 1.25;
+				letter-spacing: 0.01em; // 1%
+				margin-bottom: 0;
+			}
+
+			.channel-category {
+				font-size: 0.875rem;
+				line-height: 1.43;
+				letter-spacing: 0.01em; // 1%
+				color: $color-n-7;
+			}
+		}
+
+		.card-tags {
+			padding: 0;
+			margin: 24px 0 0;
+			list-style-type: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6px;
+
+			.tag-item {
+				padding: 5px 10px;
+				border-radius: $border-radius-l;
+				font-size: 0.8125rem;
+				line-height: 1;
+				background-color: $color-bg-blue;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------
+//  Feature Card (Icon)
+// ----------------------------------------------------
+
+.feature-card {
+	gap: 0;
+	
+	.feature-icon {
+		width: 5.25rem;
+		margin-bottom: 24px;
+	}
+	
+	.feature-title {
+		font-size: 1.5rem;
+		margin-bottom: 8px;
+	}
+}
+
+
+// ----------------------------------------------------
+//  Team Card
+// ----------------------------------------------------
+
+.member-card {
+	align-items: center !important;
+	
+	
+	.wp-block-image {
+		
+	}
+	
+	// title
+	.wp-block-heading {
+		text-align: center;
+		font-size: 1.5rem;
+		line-htight: 1;
+		margin-top: 20px;
+	}
+	
+	// des
+	p {
+		
+	}
+}
