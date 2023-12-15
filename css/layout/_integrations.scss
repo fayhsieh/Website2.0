@@ -112,6 +112,7 @@ body.page-integrations {
 
 .search-wrap {
 	position: sticky;
+	z-index: 10;
 	top: 89px;
 	padding: $gutter-width 0;
 	background-color: $color-n-1;
@@ -192,9 +193,38 @@ body.page-integrations {
 
 // Customized Card Layout
 
+.filter-board {
+	min-height: 50vh;
+	
+	&.loading {
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 20;
+			left: 0;
+			top: 0;
+			background-color: $color-n-1;
+			background-image: url('../../images/loading.gif');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 10%;
+
+			@media screen and (max-width: $grid-breakpoints-md) {
+				background-size: 25%;
+			}
+		}
+	}
+}
+
 #all-channels {
     @include columns(3, 2, 1);
     gap: 1.5rem;
+	min-height: 10.43rem;
 	
 	@media screen and (max-width: $grid-breakpoints-xl) {
 		gap: 0.75rem;

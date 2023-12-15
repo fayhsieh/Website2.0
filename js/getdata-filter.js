@@ -6,6 +6,7 @@ $(function(){
 
     // 主流程
     ~async function() {
+
         // 1. 判斷網頁語系
         let lang_param = await checkLanguage();
         
@@ -17,6 +18,9 @@ $(function(){
 
         // 4. 初始化 filter 功能
         await initFilter();
+
+        // 5. 解除 loading 動畫
+        await $('#js-filter').removeClass('loading');
     }();
 
 
@@ -48,6 +52,8 @@ $(function(){
 
     // 建置畫面
     async function buildView() {
+
+
 
         // tab
         for (let item of data_categories) {
@@ -95,8 +101,12 @@ $(function(){
             1. 可以使用關鍵字搜尋卡片標題
             2. 匹配不到關鍵字時，顯示 No search results matching the criteria.
             3. 使用側邊的 filter 可以篩選出符合分類名稱的卡片
+            4. 每次 filter 後捲軸回到上方
     */
     async function initFilter() {
+
+        let searchBar_h = $('.search-wrap').innerHeight();
+        let filter_board_topOffset =  $('#js-filter').offset().top;
 
         // 1. 關鍵字搜尋卡片標題
         function searchKeyword() {
@@ -111,6 +121,13 @@ $(function(){
 
             // 2. 匹配不到時，顯示 No search results matching the criteria.
             $('.not-found-result').toggle(!result);
+        }
+
+        // 4. 每次 filter 後捲軸回到上方
+        function scrollToTop() {
+            $('html, body').animate({
+                scrollTop: filter_board_topOffset - searchBar_h
+            }, 0);
         }
 
         $("#searchInput").on("keyup", function() {
@@ -132,6 +149,7 @@ $(function(){
             });
 
             searchKeyword(); // 1. 關鍵字搜尋卡片標題
+            scrollToTop();   // 4. 每次 filter 後捲軸回到上方
         });
     }
 });
