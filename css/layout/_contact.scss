@@ -121,4 +121,12 @@ body.page-contact {
 			}
 		}
 	}
+
+	// Submit Successful
+	div.wpforms-container-full .wpforms-confirmation-container-full, 
+	div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+		background: $color-bg-green;
+		border: 1px solid $color-celadon-green;
+		border-radius: $border-radius-s;
+	}
 }
