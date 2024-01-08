@@ -27,17 +27,30 @@ $(function(){
     // 判斷網頁語系
     async function checkLanguage() {
         let flag = $('body').hasClass('translatepress-zh_CN');
-        let lang_param = flag ? '?lang=zh_CN' : '';
-        return lang_param;
+        let lang_param = flag ? 'zh-TW,zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7' : 'zh-TW,zh-CN,zh;q=0.7,en-US;q=0.8,en;q=0.9';
+        return { 
+            'Accept-Language': lang_param,
+            'Accept-Charset': 'utf-8'
+         };
     }
 
 
-    // 取得資料
+    // 取得資料?lang=zh_CN
     async function getData(lang_param) {
         // fetch data
         const [response_categories, response_sources] = await Promise.all([
-            fetch(`https://oms.synctify.net/api/public/dataSources/categories${lang_param}`),
-            fetch(`https://oms.synctify.net/api/public/dataSources${lang_param}`),
+            fetch(`https://oms.synctify.net/api/public/dataSources/categories`, 
+                {
+                    method: 'GET',
+                    headers: lang_param
+                }
+            ),
+            fetch(`https://oms.synctify.net/api/public/dataSources`, 
+                {
+                    method: 'GET',
+                    headers: lang_param
+                }
+            ),
         ]);
         
         // parse data
