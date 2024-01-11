@@ -40,10 +40,19 @@ $color-n-10: #262626;
 // System
 
 $color-red: #dc3545;
+$color-red-hover: #bb2d3b;
+
 $color-orange: #fd7e14;
+$color-orange-hover: #e7772d;
+
 $color-yellow: #ffc107;
+$color-yellow-hover: #ffca2c;
+
 $color-green: $color-synctify;
+$color-green-hover: $color-gray-green;
+
 $color-blue: #4277CF;
+$color-blue-hover: #355fa5;
 
 // ----------------------------------------------------
 //  Border Radius
@@ -53,6 +62,7 @@ $border-radius-s: 4px;
 $border-radius-m: 8px;
 $border-radius-l: 12px;
 $border-radius-xl: 16px;
+$border-radius-xxl: 18px;
 
 // ----------------------------------------------------
 //  Box Shadow
