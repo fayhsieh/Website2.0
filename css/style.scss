@@ -203,13 +203,12 @@ p {
 				content: "\ea1f";
 				position: relative;
 				left: 0;
-				transition: 0.3s;
+				transition: left 0.3s;
 			}
 			
 			&:hover {
 				
 				&::before {
-					position: relative;
 					left: 5px;
 				}
 			}
@@ -319,6 +318,15 @@ p {
 		a {
 			&::before {
 				content: "\ea1f";
+				position: relative;
+				left: 0;
+				transition: left 0.3s;
+			}
+			
+			&:hover {
+				&::before {
+					left: 5px;
+				}
 			}
 		}
 	}
@@ -369,6 +377,7 @@ button.wpforms-submit {
 		
 		&:hover {
 			color: $color-n-1 !important;
+			border: 1px solid $color-gray-green !important;
 			background-color: $color-gray-green !important;
 		}
 	}
@@ -423,6 +432,7 @@ button.wpforms-submit {
 // ----------------------------------------------------
 
 @import 'layout/about';        // About Us
+@import 'layout/blog';         // Blog
 @import 'layout/contact';      // Book a Demo
 @import 'layout/fulfillment';  // Fulfillment
 @import 'layout/grid';         // Grid System
