@@ -21,6 +21,8 @@ You can find the `Navigation > Codes > style.scss` and write SCSS here, this plu
 | WPCode Lite | Easily add code snippets in WordPress. Insert scripts to the header and footer, add PHP code snippets with conditional logic, insert ads pixel, custom content, and more. | https://wordpress.org/plugins/insert-headers-and-footers/ |
 | WPForms Lite | Beginner friendly WordPress contact form plugin. Use our Drag & Drop form builder to create your WordPress forms. | https://wordpress.org/plugins/wpforms-lite/ |
 
+&nbsp; 
+
 # Synctify Public API Documentation
 
 The Synctify Public API allows frontend developers to retrieve a list of supported integrations from our order management system. Currently, the API supports fetching data only, and no functionality for adding, deleting, or modifying data is provided. Authorization is not required to use the API.
@@ -32,7 +34,7 @@ Base URL: https://oms.synctify.net/api/public
 ## Usage
 
 | Endpoints | Method | Path |
-| -------- | -------- | -------- |
+| :-------- | :-------- | :-------- |
 | Get All Datasources | GET | /dataSources |
 | Get a Datasource | GET | /dataSources/{dataSourceId} |
 | Get all Categories | GET | /dataSources/categories |
@@ -46,7 +48,9 @@ Base URL: https://oms.synctify.net/api/public
 #### Request
 
 Method: GET
+
 Endpoint: /dataSources
+
 Headers:
 - Accept: application/json
 - Content-Type: application/json
@@ -54,7 +58,7 @@ Headers:
 #### Response
 
 | Json Field | Description |
-|------------|-------------|
+|:------------|:-------------|
 | **id** | The unique identifier of the platform. |
 | **name** | The name of the platform. |
 | **categoryId** | The ID of the category to which the platform belongs. |
@@ -66,7 +70,7 @@ Headers:
 | **availableToConnect** | Indicates whether the platform should be displayed on the page (`true` or `false`). |
 
 
-```=json
+```json
 {
     "status": "success",
     "code": 200,
@@ -130,13 +134,16 @@ Headers:
 
 #### Request
 
+Method: GET
+
 Endpoint: /dataSources/{dataSourceId}
+
 Headers:
 - Accept: application/json
 - Content-Type: application/json
 
 #### Response
-```=json
+```json
 {
     "status": "success",
     "code": 200,
@@ -180,7 +187,10 @@ Headers:
 
 #### Request
 
+Method: GET
+
 Endpoint: /dataSources/categories
+
 Headers:
 - Accept: application/json
 - Content-Type: application/json
@@ -188,13 +198,13 @@ Headers:
 #### Response
 
 | Json Field | Description |
-|------------|-------------|
+|:------------|:-------------|
 | **id** | The unique identifier of the category. |
 | **name** | The name of the category. |
 | **icon** | The icon associated with the category, accessible using `<i class="{icon}"></i>`. |
 
 
-```=json
+```json
 {
     "status": "success",
     "code": 200,
@@ -263,7 +273,7 @@ Headers:
 
 To specify the desired language for the response, include the following headers:
 
-```=javascript
+```javascript
 fetch('API-ENDPOINT', {
     method: 'GET',
     headers: {
