@@ -27,7 +27,7 @@ $(function(){
     // 判斷網頁語系
     async function checkLanguage() {
         let flag = $('body').hasClass('translatepress-zh_CN');
-        let lang_param = flag ? 'zh_TW,zh_CN,zh;q=0.9,en_US;q=0.8,en;q=0.7' : 'zh_TW,zh_CN,zh;q=0.7,en_US;q=0.8,en;q=0.9';
+        let lang_param = flag ? 'zh_CN' : 'en_US';
         return { 
             'Accept-Language': lang_param,
             'Accept-Charset': 'utf-8'
